@@ -1,17 +1,15 @@
 import { AppBar } from "./appBar";
 import { VideoGrid } from "./videoGrid";
 import { SideBar } from "./sideBar";
-import { VideoPage } from "./videoPage";
+import { SideVideoRow } from "./sideVideoRow";
+
 
 export const HomePage = ()=> {
     return (
-        <div className="flex">
-        <SideBar></SideBar>
     <div>
         <AppBar></AppBar>
-        <VideoGrid></VideoGrid>
-        {/* <VideoPage></VideoPage> */}
-    </div>
+        {/* <VideoGrid></VideoGrid> */}
+        <SideVideoRow></SideVideoRow>
     </div>
 
     )

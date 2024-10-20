@@ -1,4 +1,4 @@
-export const VideoPage = ()=>{
+export const VideoSection = ()=>{
     return (
         // container
         <div className="w-100 h-100 p-2 m-3">
@@ -28,7 +28,7 @@ export const VideoPage = ()=>{
   <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
 </svg>
 
-<div className=" pl-1 text-base">0:00 / 4:00</div>
+<div className=" pl-1 text-base">0:40 / 4:00</div>
 
 
 </div>
