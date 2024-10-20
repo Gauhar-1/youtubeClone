@@ -9,8 +9,8 @@ export const HomePage = ()=> {
         <SideBar></SideBar>
     <div>
         <AppBar></AppBar>
-        {/* <VideoGrid></VideoGrid> */}
-        <VideoPage></VideoPage>
+        <VideoGrid></VideoGrid>
+        {/* <VideoPage></VideoPage> */}
     </div>
     </div>
 
