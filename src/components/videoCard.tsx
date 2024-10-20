@@ -1,17 +1,35 @@
+import { AppBar} from "./appBar";
+import { SideVideoRow } from "./sideVideoRow";
+
 export function VideoCard( props : any) {
     return (
-        <div className="p-3 cursor-pointer">
-            <img className="rounded-xl"  src={props.image} alt="" />
-            <div className="grid grid-cols-12">
-                <div className="col-span-2 pt-2 pl-2" >
-                    <img className="rounded-full w-20 h-20 " src={props.thumbImage} alt="" />
+        <div onClick={HandleClick} className="p-3 cursor-pointer">
+            <img  className="rounded-xl"  src={props.image} alt="" />
+            <div className="flex space-x-1">
+                <div className=" pt-2 pl-2" >
+                    <img className="rounded-full w-20  p-1" src={props.thumbImage} alt="" />
                 </div>
-                <div  className=" col-start-3 col-span-10 pt-2 ">
+                <div  className="  pt-2 ">
                     <div  className="text-base">{props.title}</div>
-                    <div className="text-gray-400 text-base">{props.channel}</div>
-                    <div className="text-gray-400">{props.views}</div>
+                    <div className="text-gray-400 text-base text-xs">{props.channel}</div>
+                    <div className="text-gray-400 text-xs">{props.views}</div>
                 </div>
             </div>
             </div>
     );
 }
+
+let count = true;
+
+ export function HandleClick(){
+    count = true;
+    return (
+        <div>
+        <AppBar></AppBar>
+        <SideVideoRow></SideVideoRow>
+    </div>
+
+    )
+ }
+
+ export default count;
