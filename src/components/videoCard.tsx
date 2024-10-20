@@ -19,7 +19,7 @@ export function VideoCard( props : any) {
     );
 }
 
-let count = true;
+let count = false;
 
  export function HandleClick(){
     count = true;
