@@ -1,5 +1,5 @@
-import { channel } from "diagnostics_channel";
 import { VideoCard } from "./videoCard";
+import { VideoSection } from "./videoSection";
 
 export const VIDEOs = [{
     title :"The Final Boss Was A Bully | Black Myth Wukong - Part 4",
@@ -165,7 +165,7 @@ export const VIDEOs = [{
     thumbImage:"./carryLogo.jpg"
 },];
 
-export function VideoGrid(){
+export function VideoGrid( props : any){
     return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {VIDEOs.map(video =><div>
@@ -174,7 +174,15 @@ export function VideoGrid(){
                 channel={video.channel} 
                 views={video.views} 
                 image={video.image}
-                thumbImage={video.thumbImage}></VideoCard>
+                thumbImage={video.thumbImage} OnClick={props.setCount} ></VideoCard>
         </div>)}
     </div>)
 }
+
+// const OnClick = (video)=>{
+//    return (
+//     <div>
+//         <VideoSection videoDetail= {video} ></VideoSection>
+//     </div>
+//    )
+// }

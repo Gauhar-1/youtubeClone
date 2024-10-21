@@ -1,4 +1,4 @@
-export const VideoSection = ()=>{
+export const VideoSection = (props : any)=>{
     return (
         // container
         <div className="w-100 h-100 p-2 m-3">
@@ -64,7 +64,7 @@ export const VideoSection = ()=>{
             </div>
             <div>
                 {/* first line */}
-            <div className="text-base pt-2 text-lg pl-1">The Final Boss Was A Bully | Black Myth Wukong - Part 4</div>
+            <div className=" pt-2 text-lg pl-1">The Final Boss Was A Bully | Black Myth Wukong - Part 4</div>
 
 
                 {/* channel logo line */}
