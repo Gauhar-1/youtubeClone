@@ -5,7 +5,7 @@ import { SideVideoGrid } from "./sideVideoGrid"
 export const SideVideoRow = () =>{
     return ( 
         <div>
-        <div className="max-lg:hidden block grid grid-cols-12">
+        <div className="max-lg:hidden  grid grid-cols-12">
             <div className="col-span-8">
             <VideoSection ></VideoSection>
             </div>

@@ -2,26 +2,25 @@ import { AppBar } from "./appBar";
 import { VideoGrid } from "./videoGrid";
 import { SideBar } from "./sideBar";
 import { SideVideoRow } from "./sideVideoRow";
-import { HandleClick } from "./videoCard";
-import count from "./videoCard";
-
+import { useState } from "react";
 
 export const HomePage = ()=> {
-    console.log(count);
-    if (count === true){
+    const [count , setCount] = useState(0);
+    if (count){
         return (
         <div>
-            <HandleClick></HandleClick>
+            <AppBar setCOunt={setCount}></AppBar>
+            <SideVideoRow></SideVideoRow>
         </div>
         )
     }
-    else if (count === false){
+    else {
         return (
             <div className="flex">
                 <SideBar></SideBar>
                 <div>
                     <AppBar></AppBar>
-                    <VideoGrid></VideoGrid>
+                    <VideoGrid  setCount={setCount}></VideoGrid>
                 </div>
             </div>
         )

@@ -1,6 +1,6 @@
 import { SearchBar } from "./searchBar"
 
-export const AppBar = ()=> {
+export const AppBar = (props : any)=> {
     return (
         <div className="flex justify-between ">
             <div className="flex">
@@ -8,7 +8,7 @@ export const AppBar = ()=> {
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
       </svg></div>
 
-        <div className="text-md text-center pl-5 pt-4 text-red-700 cursor-pointer">
+        <div className="text-md text-center pl-5 pt-4 text-red-700 cursor-pointer" onClick={() => props.setCOunt(0)}>
            Youtube</div>
             </div>
         <SearchBar></SearchBar>
