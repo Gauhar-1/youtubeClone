@@ -6,11 +6,17 @@ import { useState } from "react";
 
 export const HomePage = ()=> {
     const [count , setCount] = useState(0);
+    const [help , setHelp ] = useState({
+        title : "",
+        channel : "",
+        views : 0,
+        logo : ""
+    });
     if (count){
         return (
         <div>
             <AppBar setCOunt={setCount}></AppBar>
-            <SideVideoRow></SideVideoRow>
+            <SideVideoRow help = {help}></SideVideoRow>
         </div>
         )
     }
@@ -20,7 +26,10 @@ export const HomePage = ()=> {
                 <SideBar></SideBar>
                 <div>
                     <AppBar></AppBar>
-                    <VideoGrid  setCount={setCount}></VideoGrid>
+                    <VideoGrid  
+                    setCount={setCount}
+                    setHelp={setHelp}
+                    ></VideoGrid>
                 </div>
             </div>
         )

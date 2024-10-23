@@ -174,7 +174,7 @@ export function VideoGrid( props : any){
                 channel={video.channel} 
                 views={video.views} 
                 image={video.image}
-                thumbImage={video.thumbImage} OnClick={props.setCount} ></VideoCard>
+                thumbImage={video.thumbImage} OnClick={props.setCount} setHelp={props.setHelp} ></VideoCard>
         </div>)}
     </div>)
 }

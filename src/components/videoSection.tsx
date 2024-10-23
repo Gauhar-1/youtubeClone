@@ -1,4 +1,5 @@
 export const VideoSection = (props : any)=>{
+    // console.log(props.detail)
     return (
         // container
         <div className="w-100 h-100 p-2 m-3">
@@ -64,16 +65,16 @@ export const VideoSection = (props : any)=>{
             </div>
             <div>
                 {/* first line */}
-            <div className=" pt-2 text-lg pl-1">The Final Boss Was A Bully | Black Myth Wukong - Part 4</div>
+            <div className=" pt-2 text-lg pl-1">{props.title}</div>
 
 
                 {/* channel logo line */}
             <div className="md:flex justify-between ">
                 <div className="flex  p-2">
-                <img className="rounded-full w-10 h-10" src="./carryLogo.jpg" alt="" />
+                <img className="rounded-full w-10 h-10" src={props.logo}alt="" />
                 <div className="ml-2 mr-16">
-                <div className="text-base">BeastBoyShub</div>
-                <div className="text-xs text-gray-400 ">2.4M subcribers</div>
+                <div className="text-base">{props.channel}</div>
+                <div className="text-xs text-gray-400 ">{props.views}</div>
                 </div>
                 <div className="bg-white rounded-2xl  text-slate-900 p-2 h-10 w-15">Subscribe</div>
                 </div>
