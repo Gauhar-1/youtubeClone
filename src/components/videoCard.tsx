@@ -1,10 +1,19 @@
 import { useRecoilState } from "recoil";
 import { AppBar} from "./appBar";
 import { SideVideoRow } from "./sideVideoRow";
+import { useState } from "react";
+import { title } from "process";
 
 export function VideoCard( props : any) {
     return (
-        <div  className="p-3 cursor-pointer " onClick={() => {props.OnClick(1)}}>
+        <div  className="p-3 cursor-pointer " onClick={() => {props.OnClick(1);
+        props.setHelp({
+            title : props.title,
+            channel : props.channel,
+            views : props.views,
+            logo : props.thumbImage
+        })
+        }}>
             <img  className="rounded-xl"  src={props.image} alt="" />
             <div className="flex space-x-1">
                 <div className=" pt-2 pl-2" >
@@ -19,6 +28,8 @@ export function VideoCard( props : any) {
             </div>
     );
 }
+
+
 
 
 
