@@ -1,6 +1,16 @@
 export const SideVideoCard = (props : any) => {
     return (
-        <div className="grid grid-cols-2 space-x-4  ">
+        <div className="grid grid-cols-2 space-x-4" onClick={() => {
+            if(props.count){
+                props.setCount(1);
+            }
+            props.setHelp({
+                title : props.title,
+                channel : props.channel,
+                views : props.views,
+                logo : props.thumbImage
+            })
+            }}>
             <div className="relative">
             <img className=" rounded-xl m-3" src={props.image}alt="" />
             <div className="abosulte relative inset-0">

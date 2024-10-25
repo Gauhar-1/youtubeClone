@@ -2,17 +2,25 @@ export const VideoSection = (props : any)=>{
     // console.log(props.detail)
     return (
         // container
-        <div className="w-100 h-100 p-2 m-3">
+        <div className="w-full h-full p-2 m-3">
 
+            <div className="relative flex flex-col">
             {/* video Image */}
-            <div className="relative flex flex-col flex-start ">
-                <img className="rounded-xl p-1 " src="./hq720.webp" alt="" />
+            <div className="abosulte inset-0">
+                <img className=" rounded-xl w-full p-1" src="./hq720.webp" alt="" />
+            </div>
 
 
                 {/* Video Play Button */}
-                <div className="absolute inset-0 flex flex-col-reverse">
+                <div className="absolute bottom-0 inset-x-0  flex flex-col ">
+                    {/* time bar */}
+                    <div className="grid grid-cols-10 bg-white rounded-3xl h-1 ml-3 mr-3 mt-2 mb-2">
+                        <div className="col-span-2 bg-red-600"> </div>
+                        <div className="col-span-4 bg-slate-400"></div>
+                        <div className="col-span-4 bg-slate-700"></div>
+                    </div>
                    
-                    <div className="flex justify-between ml-3 mr-3">
+                    <div className="flex justify-between ml-3 mr-3 ">
                         <div className="flex p-1 space-x-4 m-1">
 
                             {/*left  play Button */}
@@ -29,7 +37,7 @@ export const VideoSection = (props : any)=>{
   <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
 </svg>
 
-<div className=" pl-1 text-base">0:40 / 4:00</div>
+<div className=" pl-1 text-base h-8 ">0:40 / 4:00</div>
 
 
 </div>
@@ -55,12 +63,7 @@ export const VideoSection = (props : any)=>{
                         </div>
                     </div>
  
-                    {/*  */}
-                    <div className="grid grid-cols-10 bg-white rounded-3xl h-1 ml-3 mr-3 mt-2 mb-2">
-                        <div className="col-span-2 bg-red-600"> </div>
-                        <div className="col-span-4 bg-slate-400"></div>
-                        <div className="col-span-4 bg-slate-700"></div>
-                    </div>
+                    
                 </div>
             </div>
             <div>
