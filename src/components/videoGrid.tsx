@@ -1,5 +1,6 @@
 import { VideoCard } from "./videoCard";
 import { VideoSection } from "./videoSection";
+import { fetchData } from "./fetchData";
 
 export const VIDEOs = [{
     title :"The Final Boss Was A Bully | Black Myth Wukong - Part 4",
@@ -168,21 +169,14 @@ export const VIDEOs = [{
 export function VideoGrid( props : any){
     return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-        {VIDEOs.map(video =><div>
+        {props.data.map((video : any) =><div>
             <VideoCard 
-                title={video.title} 
-                channel={video.channel} 
-                views={video.views} 
-                image={video.image}
+                title={video.snippet.title} 
+                channel={video.channelTitle} 
+                views={video.statistics.viewCount} 
+                image={video.snippet.thumbnails.medium.url}
                 thumbImage={video.thumbImage} OnClick={props.setCount} setHelp={props.setHelp} ></VideoCard>
         </div>)}
     </div>)
 }
 
-// const OnClick = (video)=>{
-//    return (
-//     <div>
-//         <VideoSection videoDetail= {video} ></VideoSection>
-//     </div>
-//    )
-// }

@@ -11,8 +11,6 @@ export const SideVideoGrid = (props : any)=> {
                 views={video.views} 
                 image={video.image}
                 setHelp={props.setHelp}
-                setCount ={props.setCount}
-                count={props.count}
                 ></SideVideoCard>
            </div> )}
         </div>

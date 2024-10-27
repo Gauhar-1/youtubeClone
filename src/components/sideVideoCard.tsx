@@ -1,9 +1,7 @@
 export const SideVideoCard = (props : any) => {
     return (
         <div className="grid grid-cols-2 space-x-4" onClick={() => {
-            if(props.count){
-                props.setCount(1);
-            }
+            
             props.setHelp({
                 title : props.title,
                 channel : props.channel,
@@ -20,7 +18,7 @@ export const SideVideoCard = (props : any) => {
             <div className="m-3 pl-2 pr-2 space-y-1" >
                 <div className="flex space-x-1 ">
                 <div className="text-sm">{props.title}</div>
-                <svg className="h-6 w-6 white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="5" r="1" />  <circle cx="12" cy="19" r="1" /></svg>
+                <svg className="h-6 w-6 white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="5" r="1" />  <circle cx="12" cy="19" r="1" /></svg>
                 </div>
                 <div className="space-y-0.5">
                 <div className="flex space-x-1">
