@@ -4,34 +4,32 @@ import { SideVideoRow } from "./sideVideoRow";
 import { useEffect, useState } from "react";
 import { FullSideBar } from "./FullSideBar";
 import { useRecoilValue } from "recoil";
-import { fetchData } from "./fetchData";
+import { fetchData} from "./fetchData";
 
 export const HomePage = () => {
     const [count, setCount] = useState(0);
-    const [data, setData] = useState([]);
-    const [category, setCategory] = useState(1);
+    const [videoData, setVideoData] = useState([]);
+    const [category, setCategory] = useState(2);
     const [help, setHelp] = useState({
         title: "",
         channel: "",
         views: 0,
-        logo: ""
+        logo: "",
     });
 
-    const recoilData = useRecoilValue(fetchData(category));
+    const VideoRecoilData = useRecoilValue(fetchData(category));
     
     useEffect(()=>{
-         if(recoilData){
-            setData(recoilData.items);
-         }
-    },[recoilData])
-    
-
+        if(VideoRecoilData){
+            setVideoData(VideoRecoilData.items);
+        }
+    },[VideoRecoilData,category])
 
     if (count) {
         return (
             <div>
                 <AppBar setCOunt={setCount} count={count}></AppBar>
-                <SideVideoRow data={data} setHelp={setHelp}></SideVideoRow>
+                <SideVideoRow help={help} data={videoData} setHelp={setHelp}></SideVideoRow>
             </div>
         );
     } else {
@@ -43,10 +41,14 @@ export const HomePage = () => {
                     <VideoGrid
                         setCount={setCount}
                         setHelp={setHelp}
-                        data={data}
+                        data={videoData}
+                        // channelData={channelData}
+
                     ></VideoGrid>
                 </div>
             </div>
         );
     }
 };
+
+

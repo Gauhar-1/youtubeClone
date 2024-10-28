@@ -17,3 +17,18 @@ export const fetchData = selectorFamily({
     }
   },
 });
+
+export const fetchData2 = selectorFamily({
+  key: "fetchData",  // Changed from `item` to `key` as `key` is the correct property name
+  get: (channelID) => async () => {
+    try {
+      const res = await axios.get(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${channelID}&key=${API_KEY}`
+      );
+      return res.data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      return { error: error.message }; // Return a basic error object
+    }
+  },
+});

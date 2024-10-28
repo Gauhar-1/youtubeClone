@@ -6,7 +6,11 @@ export const SideVideoCard = (props : any) => {
                 title : props.title,
                 channel : props.channel,
                 views : props.views,
-                logo : props.thumbImage
+                logo : props.thumbImage,
+                image : props.image,
+                likeCount : props.likeCount,
+                time:props.time,
+                channelId: props.channelId
             })
             }}>
             <div className="relative">
