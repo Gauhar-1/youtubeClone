@@ -13,24 +13,32 @@ export const SideVideoRow = (props : any) =>{
             channel = {props.help.channel}
             views = {props.help.views}
             logo = {props.help.logo}
+            image={props.help.image}
+            likeCount={props.help.likeCount}
+            channelId={props.help.channelId}
+            videoId={props.help.videoId}
             ></VideoSection>
             </div>
             <div className="col-span-4 m-2 pr-2">
-                <SideVideoGrid setHelp={props.setHelp} count={props.count} setCount={props.setCount}></SideVideoGrid>
+                <SideVideoGrid setHelp={props.setHelp} count={props.count} data={props.data} ></SideVideoGrid>
             </div>
         </div>
 
-        <div className="lg:hidden grid grid-rows-2">
+        <div className="lg:hidden">
         <div className="row-span-1">
             <VideoSection 
             title= {props.help.title}
             channel = {props.help.channel}
             views = {props.help.views}
             logo = {props.help.logo}
+            image={props.help.image}
+            likeCount={props.help.likeCount}
+            channelId={props.help.channelId}
+            videoId={props.help.videoId}
             ></VideoSection>
             </div>
             <div className="row-span-2 m-2 pr-2">
-                <SideVideoGrid setHelp={props.setHelp} setCount={props.setCount}></SideVideoGrid>
+                <SideVideoGrid setHelp={props.setHelp} setCount={props.setCount} data={props.data}></SideVideoGrid>
             </div>
         </div>
         </div>
