@@ -10,7 +10,7 @@ import { fetchData2 } from "./fetchData";
 export function VideoCard( props : any) {
     const [channelData , setChannelData] = useState<any>(null);
     console.log(props.channelId)
-    const channelRecoilData = useRecoilValue(fetchData2(props.id));
+    const channelRecoilData = useRecoilValue(fetchData2(props.channelId));
     console.log(channelRecoilData.items[0])
     
     useEffect(()=>{
@@ -28,13 +28,13 @@ export function VideoCard( props : any) {
             image : props.image,
             likeCount : props.likeCount,
             time:props.time,
-            id:props.id,
+            VideoId:props.VideoId,
         })
         }}>
             <img  className="rounded-xl"  src={props.image} alt="" />
             <div className="flex space-x-1">
-                <div className=" pt-2 pl-2" >
-                    <img className="rounded-full w-20  p-1" src={channelData? channelData.snippet.thumbnails.default.url : ""} alt="" />
+                <div className=" pt-2 pl-2  " >
+                    <img className="rounded-full w-10 h-10  p-1" src={channelData? channelData.snippet.thumbnails.default.url : ""} alt="" />
                 </div>
                 <div  className="  pt-2 ">
                     <div  className="text-base">{props.title}</div>

@@ -16,6 +16,7 @@ export const SideVideoRow = (props : any) =>{
             image={props.help.image}
             likeCount={props.help.likeCount}
             channelId={props.help.channelId}
+            videoId={props.help.videoId}
             ></VideoSection>
             </div>
             <div className="col-span-4 m-2 pr-2">
@@ -33,6 +34,7 @@ export const SideVideoRow = (props : any) =>{
             image={props.help.image}
             likeCount={props.help.likeCount}
             channelId={props.help.channelId}
+            videoId={props.help.videoId}
             ></VideoSection>
             </div>
             <div className="row-span-2 m-2 pr-2">

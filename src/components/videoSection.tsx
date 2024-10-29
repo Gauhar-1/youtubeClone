@@ -9,7 +9,8 @@ export const VideoSection = (props : any)=>{
             <div className="relative flex flex-col">
             {/* video Image */}
             <div className="abosulte inset-0">
-                <img className=" rounded-xl w-full p-1" src={props.image} alt="" />
+            <iframe width="1092" height="614" src={`https://www.youtube.com/embed/Zb1zVeXLUf8&t`}  frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrer-policy="strict-origin-when-cross-origin" allowfull-screen></iframe>
+                {/* <img className=" rounded-xl w-full p-1" src={props.image} alt="" /> */}
             </div>
 
 
@@ -79,7 +80,7 @@ export const VideoSection = (props : any)=>{
                 <img className="rounded-full w-10 h-10" src={props.logo}alt="" />
                 <div className="ml-2 mr-16">
                 <div className="text-base">{props.channel}</div>
-                <div className="text-xs text-gray-400 ">{props.views}</div>
+                <div className="text-xs text-gray-400 ">{RoundUp(props.views)} Subcribers</div>
                 </div>
                 <div className="bg-white rounded-2xl  text-slate-900 p-2 h-10 w-15">Subscribe</div>
                 </div>

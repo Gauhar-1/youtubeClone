@@ -18,7 +18,8 @@ export function VideoGrid( props : any){
                 image={video.snippet.thumbnails.medium.url}
                 likeCount={video.statistics.likeCount}
                 time={video.snippet.publishedAt}
-                id={video.id}
+                channelId={video.snippet.channelId}
+                videoId={video.id}
                  OnClick={props.setCount} setHelp={props.setHelp} ></VideoCard>
         </div>)}
     </div>)

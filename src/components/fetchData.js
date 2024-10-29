@@ -23,7 +23,7 @@ export const fetchData2 = selectorFamily({
   get: (channelID) => async () => {
     try {
       const res = await axios.get(
-        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${channelID}&key=${API_KEY}`
+        `https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelID}&key=${API_KEY}`
       );
       return res.data;
     } catch (error) {
