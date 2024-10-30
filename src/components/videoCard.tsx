@@ -9,9 +9,7 @@ import { fetchData2 } from "./fetchData";
 
 export function VideoCard( props : any) {
     const [channelData , setChannelData] = useState<any>(null);
-    console.log(props.channelId)
     const channelRecoilData = useRecoilValue(fetchData2(props.channelId));
-    console.log(channelRecoilData.items[0])
     
     useEffect(()=>{
         if(channelRecoilData){

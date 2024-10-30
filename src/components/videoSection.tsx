@@ -1,7 +1,13 @@
+import { useParams } from "next/navigation"
 import { RoundUp } from "./roundUpCount"
 
+{/* <iframe width="1092" height="614" src="https://www.youtube.com/embed/Zb1zVeXLUf8" title="Create YouTube Clone Using React JS | Build Complete Website Like YouTube In React JS 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
+
 export const VideoSection = (props : any)=>{
-    // console.log(props.detail)
+        
+    const {videoId, categoryId} = useParams();
+    console.log(videoId);
+    
     return (
         // container
         <div className="w-full h-full p-2 m-3">
@@ -9,7 +15,7 @@ export const VideoSection = (props : any)=>{
             <div className="relative flex flex-col">
             {/* video Image */}
             <div className="abosulte inset-0">
-            <iframe width="1092" height="614" src={`https://www.youtube.com/embed/Zb1zVeXLUf8&t`}  frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrer-policy="strict-origin-when-cross-origin" allowfull-screen></iframe>
+            <iframe width="1092" height="614" src={`https://www.youtube.com/embed/${props.videoId}`}  frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrer-policy="strict-origin-when-cross-origin" allowfull-screen></iframe>
                 {/* <img className=" rounded-xl w-full p-1" src={props.image} alt="" /> */}
             </div>
 
