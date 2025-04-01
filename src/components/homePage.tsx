@@ -4,7 +4,7 @@ import { SideVideoRow } from "./sideVideoRow";
 import { useEffect, useState } from "react";
 import { FullSideBar } from "./FullSideBar";
 import { useRecoilValue } from "recoil";
-import { fetchData} from "./fetchData";
+import { fetchData } from "../fetchers/fetchData"
 
 export const HomePage = () => {
     const [count, setCount] = useState(0);

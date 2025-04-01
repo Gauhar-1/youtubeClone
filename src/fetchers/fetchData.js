@@ -25,6 +25,7 @@ export const fetchData2 = selectorFamily({
       const res = await axios.get(
         `https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelID}&key=${API_KEY}`
       );
+      console.log(res.data);
       return res.data;
     } catch (error) {
       console.error("Error fetching data:", error);
