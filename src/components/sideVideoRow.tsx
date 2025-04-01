@@ -2,6 +2,7 @@ import { SideVideoCard  } from "./sideVideoCard"
 import { VideoSection } from "./videoSection"
 import { SideVideoGrid } from "./sideVideoGrid"
 import { useState } from "react"
+import { BrowserRouter } from "react-router-dom"
 
 export const SideVideoRow = (props : any) =>{
     return ( 
