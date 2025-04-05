@@ -5,6 +5,10 @@ A modern and responsive YouTube clone built with **Next.js**, **TypeScript**, an
 
 ---
 
+🌐 **Live Demo**: [youtube-clone.vercel.app](https://youtube-clone-git-main-gauhar-1s-projects.vercel.app/)
+
+---
+
 ## 🚀 Features
 
 - 🏠 Home page with dynamic video grid
