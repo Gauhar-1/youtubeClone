@@ -1,7 +1,7 @@
 
 # 🎥 YouTube Clone
 
-A modern and responsive YouTube clone built with **Next.js**, **TypeScript**, and **Tailwind CSS**. It includes core YouTube-like features such as a homepage with video thumbnails, video detail pages, and suggested videos.
+A modern and responsive YouTube clone built with **Next.js**, **TypeScript**, and **Tailwind CSS**. It includes core YouTube-like features such as a homepage with video thumbnails, video detail pages, and suggested videos
 
 ---
 
