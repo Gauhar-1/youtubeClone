@@ -22,7 +22,6 @@ export function VideoGrid( props : any){
                 time={video.snippet.publishedAt}
                 channelId={video.snippet.channelId}
                 videoId={video.id}
-                categoryId={video.snippet.categoryId}
                  OnClick={props.setCount} setHelp={props.setHelp} ></VideoCard>
             </Link>
         </div>)}
